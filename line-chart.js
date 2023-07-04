@@ -35,8 +35,8 @@ var dataset = d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/maste
                 .text((data) => {
                     return data.date + "," + data.value;
                 })
-                .attr("x", (d) => {
-                    return xScale(d.date);
+                .attr("x", (data) => {
+                    return xScale(data.date);
                 })
                 .attr("y", (d)=> {
                     return yScale(d.value);
